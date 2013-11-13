@@ -1,10 +1,9 @@
 package biz.ezcom.spring.quartz;
 
 public class Job {
-    private int i = 0;
     
-    public void work() {
-        i++;
-        System.out.println("work:" + i);
+    public void executeInternal() throws InterruptedException {
+        Thread.sleep(3000L);
+        System.out.println("job: " + System.currentTimeMillis()/1000);
     }
 }    
